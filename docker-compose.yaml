@@ -1,0 +1,15 @@
+version: "3"
+services:
+  sut:
+    build: .
+    command: py.test
+  app:
+    build: .
+    environment:
+      - REDIS=redis
+    ports:
+      - 5000:5000
+    depends_on:
+      - redis
+  redis:
+    image: redis
