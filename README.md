@@ -2,7 +2,7 @@
 
 `docker-compose up -d`
 
-# Run test
+# Run tests
 
 `docker-compose exec app pytest`
 
